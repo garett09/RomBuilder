@@ -768,6 +768,8 @@ if [ "$SKIP_BUILD" -eq 0 ]; then
   done
 
   # Patch magisk
+  echo "--- Deleting old build"
+  rm -rf /tmp/rom-magisk/
   mkdir -p /tmp/rom-magisk/
   echo "--- Patching to include extras within ROM"
 
