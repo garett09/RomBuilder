@@ -509,7 +509,7 @@ if [ "$SKIP_BUILD" -eq 0 ]; then
     SYNC_OPTIONS=""
   fi
 
-  run repo sync -c -j$(nproc --all) --force-sync --no-tags --no-clone-bundle $SYNC_OPTIONS
+  run repo sync -c -j$(nproc --all) --force-sync --no-tags --no-clone-bundle
   error_exit "repo sync"
 
   if [ ! -z "$RETURN_CHANGELOG" ]; then
